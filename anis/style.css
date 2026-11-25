@@ -1,43 +1,4 @@
 
-:root {
-    --bleu: #0033A0;
-    --orange: #F2A800;
-    --blanc: #FFFFFF;
-}
-body {
-    background-color: var(--bleu);
-    color: var(--blanc);
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: var(--orange);
-    color: var(--bleu);
-    text-align: center;
-    padding: 40px;
-}
-
-header h1 {
-    color: var(--bleu);
-    font-size: 40px;
-}
-nav {
-    background-color: var(--blanc);
-    text-align: center;
-    padding: 20px;
-}
-
-nav a {
-    color: var(--bleu);
-    text-decoration: none;
-    margin: 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: var(--orange);
-}
-
 /* =========================
    STYLE GENERAL
 ========================= */
@@ -318,3 +279,4 @@ footer p {
         font-size: 34px;
     }
 }
+
