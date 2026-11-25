@@ -10,19 +10,33 @@
 <body>
 
   <!-- En-tête : titre et retour à l'accueil -->
-  <header>
-    <h1>Laylow</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
+  <header class="site-header">
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="laylow.html" aria-current="page">Laylow</a></li>
+        <li><a href="aznavour.html">Aznavour</a></li>
+        <li><a href="cr7.html">Cr7</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-
-    <!-- Photo principale -->
+    <div class="hero">
+      <h1>Laylow</h1>
+    </div>
     <figure id="photo-principale">
       <img src="photos.celebrites/Laylow.webp" alt="Portrait de Laylow">
     </figure>
+    <nav class="nav-page" aria-label="Navigation Laylow">
+    <ul>
+      <li><a href="#presentation">Présentation</a></li>
+      <li><a href="#debuts">Débuts</a></li>
+      <li><a href="#trinity">Trinity</a></li>
+      <li><a href="#mr-anderson">Mr Anderson</a></li>
+    </ul>
+  </nav>
+
 
     <!-- Présentation -->
     <section id="presentation">
@@ -62,7 +76,7 @@
         </figure>
       </div>
     </section>
-<!--Insérer les photos de ses Eps-->
+
     <!-- Album : Trinity -->
     <section id="trinity">
       <h2>Trinity</h2>
@@ -97,8 +111,16 @@
   </main>
 
   <!-- Pied de page -->
-  <footer>
-    <p>Page réalisée par Ariel - Projet La Plateforme</p>
+ <footer class="site-footer">
+    <nav aria-label="Navigation du pied de page">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="laylow.html" aria-current="page">Laylow</a></li>
+        <li><a href="aznavour.html">Aznavour</a></li>
+        <li><a href="cr7.html">Cr7</a></li>
+      </ul>
+    </nav>
+    <p>Projet Fansite – La Plateforme</p>
   </footer>
 
 </body>
