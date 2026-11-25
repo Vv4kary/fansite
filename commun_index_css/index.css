@@ -1,0 +1,183 @@
+/* --- VARIABLES --- */
+:root {
+  --fond: #0f1115;
+  --texte: #f1f5f9;
+
+  /* Header / footer communs (neutres pour l'accueil) */
+  --nav-fond: #07090c;
+  --nav-texte: var(--texte);
+  --nav-accent: #ffffff;
+}
+
+/* --- BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+  line-height: 1.6;
+}
+
+/* --- HEADER / FOOTER COMMUNS --- */
+/* Header / footer communs */
+.site-header,
+.site-footer {
+  background: var(--nav-fond);
+  color: var(--nav-texte);
+  padding: 1rem 1.5rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--nav-accent);
+}
+
+.site-footer {
+  border-top: 3px solid var(--nav-accent);
+  text-align: center;
+}
+
+.site-footer p {
+  margin-top: 1rem;
+  font-size: .85rem;
+}
+
+.site-header ul,
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.site-header a,
+.site-footer a {
+  display: inline-block;
+  padding: .35rem .8rem;
+  color: var(--nav-texte);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .05em;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: background-color .3s, color .3s, border-color .3s;
+}
+
+/* --- TITRE --- */
+.hero {
+  padding: 3rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  margin-bottom: .5rem;
+}
+
+/* --- GRILLE DES TUILES --- */
+.celebrites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* --- TUILE CARRÉE (valeurs par défaut) --- */
+.celebrite {
+  --carte: #1a1a1a;
+  --accent: #ffffff;
+  --texte-carte: #ffffff;
+  --police-titre: Arial, Helvetica, sans-serif;
+}
+
+.celebrite a {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 4px solid var(--accent);
+  border-radius: 12px;
+  background: var(--carte);
+  color: var(--texte-carte);
+  text-decoration: none;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.celebrite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform .4s;
+}
+
+/* Bandeau avec le nom */
+.celebrite h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  background: var(--carte);
+  border-top: 4px solid var(--accent);
+  color: var(--texte-carte);
+  font-family: var(--police-titre);
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* Survol et clavier */
+.celebrite a:hover,
+.celebrite a:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .5);
+}
+
+.celebrite a:hover img,
+.celebrite a:focus-visible img {
+  transform: scale(1.06);
+}
+
+.celebrite a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* --- COULEURS PAR CÉLÉBRITÉ (reprises de leurs CSS) --- */
+.celebrite--cr7 {
+  --carte: #0f4a30;
+  --accent: #c9971c;
+  --texte-carte: #ffffff;
+  --police-titre: Impact, "Arial Narrow", sans-serif;
+}
+
+.celebrite--aznavour {
+  --carte: #11223a;
+  --accent: #f59e0b;
+  --texte-carte: #f1f5f9;
+}
+
+.celebrite--laylow {
+  --carte: #141b24;
+  --accent: #00ff9c;
+  --texte-carte: #e6edf3;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 600px) {
+  .celebrites { gap: 1.5rem; }
+
+  .celebrite h2 { font-size: 1.2rem; }
+}
