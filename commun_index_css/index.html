@@ -1,46 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Trois célébrités, trois pages à découvrir.">
   <title>Accueil - Nos célébrités</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-  <header>
-    <h1>Nos célébrités</h1>
+  <header class="site-header">
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="laylow.html">Laylow</a></li>
+        <li><a href="aznavour.html">Aznavour</a></li>
+        <li><a href="cr7.html">Cr7</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
+    <div class="hero">
+      <h1>Nos célébrités</h1>
+      <p>Clique sur une photo pour entrer dans son univers.</p>
+    </div>
+
     <section class="celebrites">
 
-      <article class="celebrite">
-        <a href="cristiano.ronaldo.html">
-          <img src="photos.celebrites/Cr7.png" alt="Cristiano Ronaldo">
+      <article class="celebrite celebrite--cr7">
+        <a href="cr7.html">
+          <img src="photos_index/Cr7.png" alt="Cristiano Ronaldo">
+          <h2>Cristiano Ronaldo</h2>
         </a>
-        <h2>Cristiano Ronaldo</h2>
       </article>
 
-      <article class="celebrite">
-        <a href="charles.aznavour.html">
-          <img src="photos.celebrites/aznavour.png" alt="Charles Aznavour">
+      <article class="celebrite celebrite--aznavour">
+        <a href="aznavour.html">
+          <img src="photos_index/aznavour.png" alt="Charles Aznavour">
+          <h2>Charles Aznavour</h2>
         </a>
-        <h2>Charles Aznavour</h2>
       </article>
 
-      <article class="celebrite">
+      <article class="celebrite celebrite--laylow">
         <a href="laylow.html">
-          <img src="photos.celebrites/Laylow.webp" alt="Laylow">
+          <img src="photos_index/Laylow.webp" alt="Laylow">
+          <h2>Laylow</h2>
         </a>
-        <h2>Laylow</h2>
       </article>
 
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
+    <nav aria-label="Navigation du pied de page">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="laylow.html">Laylow</a></li>
+        <li><a href="aznavour.html">Aznavour</a></li>
+        <li><a href="cr7.html">Cr7</a></li>
+      </ul>
+    </nav>
     <p>Projet réalisé par Anis, Ariel et Othman</p>
   </footer>
 
