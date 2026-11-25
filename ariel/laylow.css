@@ -1,0 +1,222 @@
+/* Variables */
+:root {
+  --couleur-fond: #0b0f14;
+  --couleur-texte: #e6edf3;
+  --couleur-titres: #00ff9c;
+  --couleur-carre: #141b24;
+  --nav-fond: var(--couleur-carre);
+  --nav-texte: var(--couleur-texte);
+  --nav-accent: var(--couleur-titres);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--couleur-titres);
+  text-decoration: none;
+}
+
+/* Header / footer communs */
+.site-header,
+.site-footer {
+  background: var(--nav-fond);
+  color: var(--nav-texte);
+  padding: 1rem 1.5rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--nav-accent);
+}
+
+.site-footer {
+  border-top: 3px solid var(--nav-accent);
+  text-align: center;
+}
+
+.site-footer p {
+  margin-top: 1rem;
+  font-size: .85rem;
+}
+
+.site-header ul,
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.site-header a,
+.site-footer a {
+  display: inline-block;
+  padding: .35rem .8rem;
+  color: var(--nav-texte);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .05em;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: background-color .3s, color .3s, border-color .3s;
+}
+
+/* Survol : contour */
+.site-header a:hover,
+.site-footer a:hover {
+  border-color: var(--nav-accent);
+  color: var(--nav-accent);
+}
+
+/* Page courante : fond plein, différent du survol */
+.site-header a[aria-current="page"],
+.site-footer a[aria-current="page"] {
+  background: var(--nav-accent);
+  border-color: var(--nav-accent);
+  color: var(--couleur-fond);
+}
+
+/* Visible au clavier */
+a:focus-visible {
+  outline: 3px solid var(--nav-accent);
+  outline-offset: 3px;
+}
+
+/* Navigation interne à la page */
+.nav-page {
+  margin-bottom: 30px;
+}
+
+.nav-page ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+  list-style: none;
+}
+
+.nav-page a {
+  display: inline-block;
+  padding: .3rem .9rem;
+  font-size: .9rem;
+  border: 1px solid var(--couleur-titres);
+  border-radius: 999px;
+  transition: background-color .3s, color .3s;
+}
+
+.nav-page a:hover {
+  background: var(--couleur-titres);
+  color: var(--couleur-fond);
+}
+
+/* Titre */
+.hero {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--couleur-titres);
+}
+
+/* Ancres : ne pas passer sous le header sticky */
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 5rem; }
+
+/* Contenu */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background-color: var(--couleur-carre);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: var(--couleur-titres);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Photo principale */
+#photo-principale {
+  max-width: 450px;
+  margin: 0 auto 30px;
+}
+
+#photo-principale img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--couleur-titres);
+  border-radius: 10px;
+}
+
+/* Covers EP */
+#covers-ep {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#covers-ep figure {
+  flex: 1 1 180px;
+  max-width: 200px;
+}
+
+#covers-ep img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Albums */
+#trinity figure,
+#mr-anderson figure {
+  max-width: 350px;
+  margin: 0 auto 20px;
+}
+
+#trinity img,
+#mr-anderson img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Légendes */
+figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: var(--couleur-titres);
+}
