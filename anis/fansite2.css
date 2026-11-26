@@ -1,5 +1,5 @@
 
-/* --- VARIABLES --- */
+
 :root {
   --fond: #111526;         
   --carte: #1c233d;        
@@ -10,13 +10,13 @@
   --texte: #ffffff;         
   --bleu-clair: #38b6ff;    
 
-  /* Header / footer communs */
+  
   --nav-fond: var(--sombre);
   --nav-texte: var(--texte);
   --nav-accent: var(--accent);
 }
 
-/* --- CONFIGURATION GÉNÉRALE --- */
+
 * {
   box-sizing: border-box;
 }
@@ -39,7 +39,7 @@ img {
   display: block;
 }
 
-/* --- HEADER / FOOTER COMMUNS --- */
+
 .site-header,
 .site-footer {
   background: var(--nav-fond);
@@ -94,14 +94,14 @@ img {
   transition: background-color .3s, color .3s, border-color .3s;
 }
 
-/* Survol : contour */
+
 .site-header a:hover,
 .site-footer a:hover {
   border-color: var(--nav-accent);
   color: var(--nav-accent);
 }
 
-/* Page courante : fond plein */
+
 .site-header a[aria-current="page"],
 .site-footer a[aria-current="page"] {
   background: var(--nav-accent);
@@ -109,13 +109,13 @@ img {
   color: var(--nav-fond);
 }
 
-/* Visible au clavier */
+
 a:focus-visible {
   outline: 3px solid var(--nav-accent);
   outline-offset: 3px;
 }
 
-/* --- TITRE DE PAGE (HERO) --- */
+
 .hero {
   padding: 60px 20px;
   text-align: center;
@@ -135,14 +135,14 @@ h1 {
   line-height: 1.2;
 }
 
-/* --- CONTENEUR PRINCIPAL --- */
+
 main {
   max-width: 950px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/*  hero qui  occupe toute la largeur de la page */
+
 main > .hero {
   margin: -40px -20px 40px;
 }
@@ -171,7 +171,7 @@ h3 {
   margin-top: 25px;
 }
 
-/* --- LISTES --- */
+
 ul {
   padding-left: 20px;
 }
@@ -180,11 +180,10 @@ li {
   margin-bottom: 12px;
 }
 
-/* --- GALERIE --- */
-/* --- GALERIE --- */
+
 .galerie {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Force 4 colonnes égales sur la même ligne */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 1rem;
 }
 
@@ -207,7 +206,7 @@ li img {
   border: 2px solid var(--bordure);
 }
 
-/* --- PAROLES (details) --- */
+
 details {
   margin-top: 25px;
   padding: 15px 20px;
@@ -227,7 +226,7 @@ details p {
   font-style: italic;
 }
 
-/* --- ADAPTATION MOBILE --- */
+
 @media (max-width: 600px) {
   h1 {
     font-size: 2.2rem;
@@ -249,7 +248,7 @@ details p {
   }
 }
 
-/* --- SOMMAIRE DE PAGE --- */
+
 .sommaire-page ul {
   display: flex;
   flex-wrap: wrap;
@@ -277,8 +276,8 @@ details p {
   background-color: var(--accent-fonce);
   color: var(--sombre);
 }
+ 
 
-/* Empêche le header sticky de cacher le haut de la section au clic */
 section {
   scroll-margin-top: 90px;
 }
