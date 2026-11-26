@@ -243,7 +243,7 @@ figcaption {
   background-color: var(--couleur-fond);
   border: 1px solid var(--couleur-titres);
   border-radius: 8px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .meta-date {
