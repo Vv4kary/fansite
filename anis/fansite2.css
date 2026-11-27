@@ -36,6 +36,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -237,6 +238,10 @@ details p {
     padding: 20px;
   }
 
+  .galerie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .site-header ul,
   .site-footer ul {
     gap: .4rem;
@@ -280,5 +285,5 @@ details p {
 
 /* Empêche le header sticky de cacher le haut de la section au clic */
 section {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 110px;
 }

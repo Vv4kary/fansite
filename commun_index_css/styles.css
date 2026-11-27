@@ -23,6 +23,13 @@ body {
   background: var(--fond);
   color: var(--texte);
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 /* --- HEADER / FOOTER COMMUNS --- */
@@ -42,6 +49,7 @@ body {
 }
 
 .site-footer {
+  margin-top: auto;
   border-top: 3px solid var(--nav-accent);
   text-align: center;
 }
